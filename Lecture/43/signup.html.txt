@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="base::layout(~{::section})">
+<head>
+    <meta charset="UTF-8">
+    <title>this is home page</title>
+</head>
+<body>
+<section>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-6 offset-md-3">
+               <div class="my-card mt-3">
+
+                   <div class="container text-center">
+                       <img class=""  width="120px" src="" th:src="@{/image/banner.jpg}" alt="hello" />
+                   </div>
+
+                   <h1 class="text-center">Register Here!! </h1>
+
+                   <form action="" th:action="@{/do_register}" method="post">
+
+                       <!-- name field -->
+                       <div class="form-group">
+
+                           <label for="name_field">Your Name</label>
+
+                           <input
+                                   type="text"
+                                   class="form-control"
+                                   id="name_field"
+                                   aria-describedby="emailHelp"
+                                   placeholder="Enter Name Here"
+                                   required/>
+
+                       </div>
+
+                       <!-- email field -->
+                       <div class="form-group">
+
+                           <label for="email_field">Your Email</label>
+
+                           <input
+                                   type="email"
+                                   class="form-control"
+                                   id="email_field"
+                                   aria-describedby="emailHelp"
+                                   placeholder="Enter Email Here"
+                                   required/>
+
+                       </div>
+
+                       <!-- Password field -->
+                       <div class="form-group">
+
+                           <label for="password_field">Your Password</label>
+
+                           <input
+                                   type="password"
+                                   class="form-control"
+                                   id="password_field"
+                                   aria-describedby="emailHelp"
+                                   placeholder="Enter Password Here"
+                                   required/>
+
+                       </div>
+
+                       <!-- user about field -->
+
+                       <div class="form-group">
+
+                           <textarea placeholder="Enter something yourself" rows="10" class="form-control"></textarea>
+
+                       </div>
+                       <div class="container text-center">
+
+                           <button type="submit" class="btn bg-primary text-white">Submit</button>
+                           <button type="reset" class="btn bg-warning text-white">Reset</button>
+
+
+                       </div>
+                       
+                   </form>
+
+               </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>
